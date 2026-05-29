@@ -12,11 +12,20 @@ import {
 /* -------------------------------------------------------------------------- */
 const NAV = [
   { label: 'Collection', href: '#collection' },
+  { label: 'Villas', href: '/villas' },
+  { label: 'Lands', href: '/lands' },
   { label: 'Bali Life', href: '#lifestyle' },
   { label: 'Invest', href: '#invest' },
   { label: 'Voices', href: '#voices' },
   { label: 'Contact', href: '#contact' },
 ]
+
+const LANGS = ['EN', 'ID', 'RU']
+const HERO_COPY = {
+  EN: { eyebrow: 'Theo — Digital Marketing at Jaya Carita Bali Property', t1: 'Your Bali story,', em: 'begins', t2: 'with land.', sub: "I'm Theo. I help foreign investors, founders and lifestyle buyers discover the right land and villa opportunities in Bali — backed by the trusted portfolio of Jaya Carita Bali Property.", cta: 'View the Collection' },
+  ID: { eyebrow: 'Theo — Digital Marketing di Jaya Carita Bali Property', t1: 'Cerita Bali Anda,', em: 'dimulai', t2: 'dari tanah.', sub: 'Saya Theo. Saya membantu investor asing, pengusaha, dan pembeli gaya hidup menemukan peluang tanah dan villa yang tepat di Bali — didukung portofolio terpercaya Jaya Carita Bali Property.', cta: 'Lihat Koleksi' },
+  RU: { eyebrow: 'Тео — Цифровой маркетинг, Jaya Carita Bali Property', t1: 'Ваша история Бали,', em: 'начинается', t2: 'с земли.', sub: 'Я Тео. Помогаю иностранным инвесторам, основателям и покупателям недвижимости для жизни найти подходящие земельные участки и виллы на Бали — при поддержке проверенного портфолио Jaya Carita Bali Property.', cta: 'Смотреть коллекцию' },
+}
 
 const PROPERTIES = [
   {
@@ -89,21 +98,10 @@ const STATS = [
 ]
 
 const TESTIMONIALS = [
-  {
-    quote: 'Ayu found us a parcel that wasn’t on any market. Two years later, the villa is built and yielding 18%. She is the only person I would trust in Bali.',
-    name: 'Marc D.',
-    role: 'Founder, Lisbon',
-  },
-  {
-    quote: 'It felt less like buying property and more like being introduced to the island. Every detail — notary, zoning, design — was already considered.',
-    name: 'Sasha & Elena K.',
-    role: 'Investors, Dubai',
-  },
-  {
-    quote: 'I was sceptical about Bali. Ayu changed that in a single afternoon of driving. The home she curated for us is now where we spend half the year.',
-    name: 'James R.',
-    role: 'CEO, Singapore',
-  },
+  { quote: 'Theo guided us through every step — title verification, notary, even introductions to a local builder. With Jaya Carita we felt informed, never pressured. Two years on, our Cemagi villa is fully booked year-round.', name: 'Marc & Camille D.', role: 'Investors, Paris' },
+  { quote: 'I had spoken to five agencies before Jaya Carita Bali. Theo was the only one who said "this parcel is not right for you" — and showed me three better ones the same day. That honesty closed the deal.', name: 'Dmitry K.', role: 'Founder, Moscow' },
+  { quote: 'As foreign buyers we were nervous about ownership structures in Indonesia. Theo and the JC Bali team handled the PT PMA setup end-to-end. Transparent, professional, and genuinely kind.', name: 'James & Priya R.', role: 'Family Office, Singapore' },
+  { quote: 'The Ubud land we bought through Theo has appreciated 40% in eighteen months. But more importantly, the process was calm. He treats clients like long-term relationships, not transactions.', name: 'Sofia L.', role: 'Architect, Lisbon' },
 ]
 
 const LIFESTYLE_IMAGES = [
@@ -135,7 +133,7 @@ const stagger = {
 /* -------------------------------------------------------------------------- */
 /* Components                                                                 */
 /* -------------------------------------------------------------------------- */
-function Navbar() {
+function Navbar({ lang, setLang }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -164,7 +162,7 @@ function Navbar() {
           <span className={`block text-[9px] uppercase tracking-luxe mt-1 font-sans not-italic ${scrolled ? 'text-[#1a1a1a]/50' : 'text-white/60'}`}>Jaya Carita Bali Property</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-8">
           {NAV.map((n) => (
             <a key={n.href} href={n.href}
                className={`text-[11px] uppercase tracking-luxe transition-colors hover:opacity-60 ${
@@ -173,6 +171,18 @@ function Navbar() {
               {n.label}
             </a>
           ))}
+          <div className={`flex items-center gap-1 ml-2 pl-4 border-l ${scrolled ? 'border-black/15' : 'border-white/30'}`}>
+            {LANGS.map((l) => (
+              <button key={l} onClick={() => setLang(l)}
+                className={`text-[10px] uppercase tracking-luxe px-2 py-1 rounded-full transition ${
+                  lang === l
+                    ? (scrolled ? 'bg-[#1a1a1a] text-[#f5f1ea]' : 'bg-white text-[#1a1a1a]')
+                    : (scrolled ? 'text-[#1a1a1a]/55 hover:text-[#1a1a1a]' : 'text-white/65 hover:text-white')
+                }`}>
+                {l}
+              </button>
+            ))}
+          </div>
         </nav>
 
         <a href={WHATSAPP} target="_blank" rel="noreferrer"
@@ -219,11 +229,12 @@ function Navbar() {
   )
 }
 
-function Hero() {
+function Hero({ lang }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '25%'])
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
+  const c = HERO_COPY[lang] || HERO_COPY.EN
 
   return (
     <section id="top" ref={ref} className="relative h-[100svh] w-full overflow-hidden bg-[#1a1a1a]">
@@ -247,15 +258,16 @@ function Hero() {
           className="text-[11px] uppercase tracking-luxe text-white/80 mb-6 flex items-center gap-3"
         >
           <span className="w-10 h-px bg-white/50" />
-          Theo — Digital Marketing at Jaya Carita Bali Property
+          {c.eyebrow}
         </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-white text-[14vw] md:text-[7.5vw] leading-[0.92] tracking-display max-w-[1200px]"
+          key={lang}
         >
-          Your Bali story, <span className="italic font-light">begins</span>
-          <br />with land.
+          {c.t1} <span className="italic font-light">{c.em}</span>
+          <br />{c.t2}
         </motion.h1>
 
         <motion.div
@@ -263,12 +275,12 @@ function Hero() {
           className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8"
         >
           <p className="text-white/85 max-w-md text-[15px] leading-relaxed">
-            I&apos;m Theo. I help foreign investors, founders and lifestyle buyers discover the right land and villa opportunities in Bali — backed by the trusted portfolio of Jaya Carita Bali Property.
+            {c.sub}
           </p>
           <div className="flex items-center gap-4">
             <a href="#collection"
                className="inline-flex items-center gap-3 text-[11px] uppercase tracking-luxe text-white border border-white/60 px-6 py-4 rounded-full hover:bg-white hover:text-[#1a1a1a] transition-all duration-500">
-              View the Collection <ArrowUpRight size={14} />
+              {c.cta} <ArrowUpRight size={14} />
             </a>
           </div>
         </motion.div>
@@ -749,10 +761,11 @@ function WhatsAppFloat() {
 /* Page                                                                       */
 /* -------------------------------------------------------------------------- */
 function App() {
+  const [lang, setLang] = useState('EN')
   return (
     <main className="relative">
-      <Navbar />
-      <Hero />
+      <Navbar lang={lang} setLang={setLang} />
+      <Hero lang={lang} />
       <Marquee />
       <About />
       <Collection />
