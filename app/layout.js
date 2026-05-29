@@ -14,12 +14,12 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'AYU BALI — Private Property Curator & Investment Consultant',
-  description: 'A personal Bali property curator helping discerning clients discover premium land and villa opportunities. Bali villas, investment land, and lifestyle estates — privately curated.',
-  keywords: 'Bali villa, Bali property investment, luxury Bali real estate, Bali land for sale, Canggu villa, Uluwatu villa, Bali investment consultant',
+  title: 'THEO — Bali Property Curator | Jaya Carita Bali Property',
+  description: 'Theo, your personal Bali property advisor at Jaya Carita Bali Property. Curated land, villa, and investment opportunities across Canggu, Ubud, Uluwatu, Cemagi and beyond.',
+  keywords: 'Bali villa, Bali land for sale, Bali property investment, Jaya Carita Bali, Canggu land, Ubud land, Cemagi land, Bali leasehold, Bali freehold, Theo Bali agent',
   openGraph: {
-    title: 'AYU BALI — Private Property Curator',
-    description: 'Curated villa & land opportunities in Bali for foreign investors and lifestyle buyers.',
+    title: 'THEO — Bali Property Curator',
+    description: 'Curated land & villa opportunities in Bali, with Jaya Carita Bali Property.',
     type: 'website',
   },
 }

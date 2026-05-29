@@ -20,44 +20,64 @@ const NAV = [
 
 const PROPERTIES = [
   {
-    id: 'villa-suara',
-    name: 'Villa Suara',
-    location: 'Uluwatu — Cliffside',
-    price: 'USD 1.85M',
-    beds: 4, baths: 5, sqm: 620,
-    tag: 'Freehold',
-    img: 'https://images.pexels.com/photos/35043038/pexels-photo-35043038.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200',
-    blurb: 'A cliffside sanctuary suspended above the Indian Ocean. Limestone, teak, and a 22-metre infinity edge.',
+    id: 'jimbaran-36are',
+    name: 'Prime 36 Are Land',
+    location: 'Jimbaran — Close to the Beach',
+    sqm: 3600,
+    tag: 'Freehold · For Sale',
+    img: 'https://jcbaliproperty.com/wp-content/uploads/2025/10/freehold-36R-850x570.jpg',
+    href: 'https://jcbaliproperty.com/property/prime-36-are-land-for-sale-in-jimbaran-close-to-the-beach/',
+    blurb: 'A rare 3,600 m² freehold parcel in Jimbaran, walking distance to the beach. Exceptional for resort, villa estate, or long-hold investment.',
   },
   {
-    id: 'villa-tanah',
-    name: 'Tanah Estate',
-    location: 'Canggu — Pererenan',
-    price: 'USD 1.20M',
-    beds: 3, baths: 4, sqm: 480,
-    tag: 'Leasehold 30y',
-    img: 'https://images.pexels.com/photos/2480608/pexels-photo-2480608.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200',
-    blurb: 'Tropical modernism wrapped in rice paddies. Steps from the surf line of Pererenan.',
+    id: 'kerambitan-6500',
+    name: 'Strategic Land',
+    location: 'Kerambitan — 6,500 m²',
+    sqm: 6500,
+    tag: 'For Sale · Investment',
+    img: 'https://jcbaliproperty.com/wp-content/uploads/2026/03/65are2.jpg',
+    href: 'https://jcbaliproperty.com/property/strategic-land-for-sale-in-kerambitan-great-investment-opportunity/',
+    blurb: 'A landmark 65-are parcel in Tabanan’s emerging Kerambitan corridor. Strategic location for boutique resort or master-planned community.',
   },
   {
-    id: 'villa-langit',
-    name: 'Langit House',
-    location: 'Ubud — Sayan Ridge',
-    price: 'USD 2.40M',
-    beds: 5, baths: 6, sqm: 780,
-    tag: 'Freehold',
-    img: 'https://images.pexels.com/photos/34277690/pexels-photo-34277690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200',
-    blurb: 'A jungle estate carved into the Ayung valley. Open pavilions, river views, profound stillness.',
+    id: 'cemagi-coastal',
+    name: 'Cemagi Coastal Pink Zone',
+    location: 'Cemagi — 800 m²',
+    sqm: 800,
+    tag: 'Leasehold',
+    img: 'https://jcbaliproperty.com/wp-content/uploads/2025/09/Untitled-design-3-850x570.jpg',
+    href: 'https://jcbaliproperty.com/property/balis-hidden-jewel-8-are-land-in-cemagi-coastal-pink-zone/',
+    blurb: 'Bali’s hidden jewel — 8 are within the protected coastal pink zone of Cemagi. Sea breeze, low-density, full villa permissions.',
   },
   {
-    id: 'land-bingin',
-    name: 'Bingin Land Parcel',
-    location: 'Uluwatu — 1,400 m²',
-    price: 'USD 680K',
-    beds: 0, baths: 0, sqm: 1400,
-    tag: 'Investment Land',
-    img: 'https://images.pexels.com/photos/35236021/pexels-photo-35236021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200',
-    blurb: 'Rare clifftop parcel with white-water views. Ready-to-build, zoned residential-tourism.',
+    id: 'cemagi-32are',
+    name: 'Spacious 32 Are',
+    location: 'Cemagi — Ocean Breeze',
+    sqm: 1700,
+    tag: 'Leasehold',
+    img: 'https://jcbaliproperty.com/wp-content/uploads/2025/09/2-17r-cemagi-1140x764.jpg',
+    href: 'https://jcbaliproperty.com/property/spacious-32-are-land-with-ocean-breeze-in-cemagi/',
+    blurb: 'A generous 1,700 m² leasehold parcel kissed by the ocean breeze. Ideal canvas for a tropical estate or multi-villa development.',
+  },
+  {
+    id: 'ubud-petulu',
+    name: 'Riverside Land — Petulu',
+    location: 'Ubud — 900 m²',
+    sqm: 900,
+    tag: 'Leasehold',
+    img: 'https://jcbaliproperty.com/wp-content/uploads/2026/05/ubud-9r-1.jpg',
+    href: 'https://jcbaliproperty.com/property/riverside-land-for-lease-in-petulu-ubud/',
+    blurb: 'A riverside sanctuary tucked into Petulu, north of Ubud. Mature trees, water rights, and the kind of silence Ubud is built for.',
+  },
+  {
+    id: 'babakan-investment',
+    name: 'Prime Investment Land',
+    location: 'Babakan — Near Beach',
+    sqm: 500,
+    tag: 'Leasehold · High Value',
+    img: 'https://jcbaliproperty.com/wp-content/uploads/2025/10/Untitled-design-14-850x570.jpg',
+    href: 'https://jcbaliproperty.com/property/prime-investment-land-in-babakan-high-value-location-near-the-beach/',
+    blurb: 'A high-value 5-are parcel in Babakan’s tightest beachside pocket. Walk to the sand, ride to Canggu — yield-ready land.',
   },
 ]
 
@@ -93,7 +113,12 @@ const LIFESTYLE_IMAGES = [
   'https://images.pexels.com/photos/6190475/pexels-photo-6190475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1200',
 ]
 
-const WHATSAPP = 'https://wa.me/6281234567890?text=Hello%20Ayu%2C%20I%27d%20like%20to%20explore%20Bali%20property%20opportunities.'
+const WHATSAPP = 'https://wa.me/6281918238875?text=Hi%20Theo%2C%20I%27m%20interested%20in%20exploring%20Bali%20property%20opportunities%20with%20Jaya%20Carita%20Bali.'
+const INSTAGRAM = 'https://instagram.com/Theo_JCPropertyagent'
+const EMAIL = 'tsinjal52@gmail.com'
+const PHONE_DISPLAY = '+62 819 1823 8875'
+const OFFICE_URL = 'https://maps.app.goo.gl/umG3aRvZ4qjTqKXq6'
+const OFFICE_ADDR = 'Jalan Betaka No 3a, Dalung, Kuta Utara, Badung, Bali 80361'
 
 /* -------------------------------------------------------------------------- */
 /* Reusable animations                                                        */
@@ -132,10 +157,11 @@ function Navbar() {
       }`}
     >
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#top" className={`font-serif text-xl md:text-2xl tracking-display transition-colors ${
+        <a href="#top" className={`font-serif text-xl md:text-2xl tracking-display transition-colors leading-none ${
           scrolled ? 'text-[#1a1a1a]' : 'text-white'
         }`}>
-          AYU<span className="italic font-light"> bali</span>
+          THEO<span className="italic font-light"> · jc bali</span>
+          <span className={`block text-[9px] uppercase tracking-luxe mt-1 font-sans not-italic ${scrolled ? 'text-[#1a1a1a]/50' : 'text-white/60'}`}>Jaya Carita Bali Property</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -171,7 +197,7 @@ function Navbar() {
             className="fixed inset-0 bg-[#1a1a1a] z-[60] flex flex-col p-8"
           >
             <div className="flex justify-between items-center">
-              <span className="font-serif text-2xl text-[#f5f1ea]">AYU <span className="italic font-light">bali</span></span>
+              <span className="font-serif text-2xl text-[#f5f1ea]">THEO <span className="italic font-light">· jc bali</span></span>
               <button onClick={() => setOpen(false)} className="text-[#f5f1ea]"><X size={24} /></button>
             </div>
             <nav className="flex-1 flex flex-col justify-center gap-8">
@@ -184,7 +210,7 @@ function Navbar() {
             </nav>
             <a href={WHATSAPP} target="_blank" rel="noreferrer"
                className="inline-flex items-center gap-2 text-xs uppercase tracking-luxe text-[#f5f1ea] border border-[#f5f1ea]/50 px-6 py-4 justify-center rounded-full">
-              WhatsApp Ayu <ArrowUpRight size={14} />
+              WhatsApp Theo <ArrowUpRight size={14} />
             </a>
           </motion.div>
         )}
@@ -221,15 +247,15 @@ function Hero() {
           className="text-[11px] uppercase tracking-luxe text-white/80 mb-6 flex items-center gap-3"
         >
           <span className="w-10 h-px bg-white/50" />
-          Private Property Curator — Est. Bali, 2017
+          Theo — Digital Marketing at Jaya Carita Bali Property
         </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-white text-[14vw] md:text-[7.5vw] leading-[0.92] tracking-display max-w-[1200px]"
         >
-          The island, <span className="italic font-light">privately</span>
-          <br />curated.
+          Your Bali story, <span className="italic font-light">begins</span>
+          <br />with land.
         </motion.h1>
 
         <motion.div
@@ -237,7 +263,7 @@ function Hero() {
           className="mt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8"
         >
           <p className="text-white/85 max-w-md text-[15px] leading-relaxed">
-            A small, considered portfolio of villas and land for those who buy with intention. Off-market, vetted, and sourced through fifteen years of relationships on the island.
+            I&apos;m Theo. I help foreign investors, founders and lifestyle buyers discover the right land and villa opportunities in Bali — backed by the trusted portfolio of Jaya Carita Bali Property.
           </p>
           <div className="flex items-center gap-4">
             <a href="#collection"
@@ -320,16 +346,16 @@ function About() {
 
           <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-8 pt-8 border-t border-black/10">
             <div>
-              <p className="font-serif text-4xl tracking-display">120<span className="text-[#8a5a3b]">+</span></p>
-              <p className="text-xs uppercase tracking-luxe text-[#2b2926]/60 mt-1">Curated Acquisitions</p>
+              <p className="font-serif text-4xl tracking-display">25<span className="text-[#8a5a3b]">+</span></p>
+              <p className="text-xs uppercase tracking-luxe text-[#2b2926]/60 mt-1">Active Listings</p>
             </div>
             <div>
-              <p className="font-serif text-4xl tracking-display">7<span className="text-[#8a5a3b]">yr</span></p>
-              <p className="text-xs uppercase tracking-luxe text-[#2b2926]/60 mt-1">On the Island</p>
+              <p className="font-serif text-4xl tracking-display">12<span className="text-[#8a5a3b]">+</span></p>
+              <p className="text-xs uppercase tracking-luxe text-[#2b2926]/60 mt-1">Bali Regions</p>
             </div>
             <div>
-              <p className="font-serif text-4xl tracking-display">22<span className="text-[#8a5a3b]">+</span></p>
-              <p className="text-xs uppercase tracking-luxe text-[#2b2926]/60 mt-1">Nationalities Served</p>
+              <p className="font-serif text-4xl tracking-display">1<span className="text-[#8a5a3b]">on1</span></p>
+              <p className="text-xs uppercase tracking-luxe text-[#2b2926]/60 mt-1">Personal Guidance</p>
             </div>
           </motion.div>
         </motion.div>
@@ -351,18 +377,18 @@ function Collection() {
               <span className="w-10 h-px bg-[#8a5a3b]" /> The Collection
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-serif text-5xl md:text-7xl tracking-display leading-[0.98] max-w-3xl">
-              Four homes, <span className="italic font-light">selected this season.</span>
+              Six parcels, <span className="italic font-light">selected this season.</span>
             </motion.h2>
           </div>
           <motion.p variants={fadeUp} className="text-[#2b2926]/70 max-w-sm">
-            A rotating portfolio of villas and land, refreshed quarterly. Each property is visited, photographed, and legally pre-cleared by our team.
+            A live selection from our full portfolio of 25+ active land and villa opportunities — refreshed continually. Each property is visited, photographed, and pre-cleared by our notary team.
           </motion.p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {PROPERTIES.map((p, i) => (
             <motion.a
-              href={WHATSAPP} target="_blank" rel="noreferrer"
+              href={p.href || WHATSAPP} target="_blank" rel="noreferrer"
               key={p.id}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -392,11 +418,13 @@ function Collection() {
               </div>
               <div className="mt-5 flex items-center justify-between">
                 <div className="flex items-center gap-5 text-xs text-[#2b2926]/70">
-                  {p.beds > 0 && <span className="flex items-center gap-1.5"><Bed size={13}/> {p.beds}</span>}
-                  {p.baths > 0 && <span className="flex items-center gap-1.5"><Bath size={13}/> {p.baths}</span>}
-                  <span className="flex items-center gap-1.5"><Maximize size={13}/> {p.sqm} m²</span>
+                  <span className="flex items-center gap-1.5"><Maximize size={13}/> {p.sqm.toLocaleString()} m²</span>
+                  <span className="hidden sm:inline text-[#2b2926]/40">·</span>
+                  <span className="hidden sm:inline uppercase tracking-luxe text-[10px]">View on JC Bali</span>
                 </div>
-                <span className="font-serif text-xl tracking-display">{p.price}</span>
+                <span className="font-serif text-base italic text-[#8a5a3b] inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Details <ArrowUpRight size={14} />
+                </span>
               </div>
             </motion.a>
           ))}
@@ -409,9 +437,9 @@ function Collection() {
           <p className="text-sm text-[#2b2926]/60 italic font-serif mb-6">
             — Off-market opportunities available upon request —
           </p>
-          <a href={WHATSAPP} target="_blank" rel="noreferrer"
+          <a href="https://jcbaliproperty.com/land/" target="_blank" rel="noreferrer"
              className="inline-flex items-center gap-3 text-[11px] uppercase tracking-luxe text-[#1a1a1a] border border-[#1a1a1a] px-8 py-4 rounded-full hover:bg-[#1a1a1a] hover:text-[#f5f1ea] transition-all duration-500">
-            Request the Private Portfolio <ArrowUpRight size={14} />
+            See the Full Portfolio at JCBali <ArrowUpRight size={14} />
           </a>
         </motion.div>
       </div>
@@ -621,11 +649,11 @@ function CTA() {
             <a href={WHATSAPP} target="_blank" rel="noreferrer"
                className="group inline-flex items-center gap-3 text-sm uppercase tracking-luxe bg-[#25D366] text-white px-8 py-5 rounded-full hover:bg-[#1ebe57] transition-all duration-500">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              WhatsApp Ayu Now <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              WhatsApp Theo Now <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
-            <a href="mailto:hello@ayubali.co"
+            <a href={`mailto:${EMAIL}`}
                className="inline-flex items-center gap-3 text-sm uppercase tracking-luxe border border-[#1a1a1a] text-[#1a1a1a] px-8 py-5 rounded-full hover:bg-[#1a1a1a] hover:text-[#f5f1ea] transition-all duration-500">
-              Or write a letter <Mail size={14} />
+              Email Theo <Mail size={14} />
             </a>
           </motion.div>
         </motion.div>
@@ -663,11 +691,12 @@ function Footer() {
       <div className="max-w-[1500px] mx-auto">
         <div className="grid md:grid-cols-12 gap-12 pb-20 border-b border-[#f5f1ea]/10">
           <div className="md:col-span-5">
-            <p className="font-serif text-4xl md:text-5xl tracking-display mb-6">
-              AYU <span className="italic font-light text-[#b5896a]">bali</span>
+            <p className="font-serif text-4xl md:text-5xl tracking-display mb-3">
+              THEO <span className="italic font-light text-[#b5896a]">· jc bali</span>
             </p>
+            <p className="text-xs uppercase tracking-luxe text-[#f5f1ea]/50 mb-6">Digital Marketing — Jaya Carita Bali Property</p>
             <p className="text-[#f5f1ea]/60 max-w-md leading-relaxed">
-              Private property curation and investment consultancy. Based in Canggu, working across the island. By introduction — always.
+              Personal property guidance across Bali — from prime land in Cemagi and Babakan to villa investments in Uluwatu and Ubud. Backed by the full Jaya Carita Bali portfolio.
             </p>
           </div>
           <div className="md:col-span-3">
@@ -676,21 +705,22 @@ function Footer() {
               {NAV.map((n) => (
                 <li key={n.href}><a href={n.href} className="hover:text-[#b5896a] transition">{n.label}</a></li>
               ))}
+              <li><a href="https://jcbaliproperty.com/" target="_blank" rel="noreferrer" className="hover:text-[#b5896a] transition">JC Bali Portfolio</a></li>
             </ul>
           </div>
           <div className="md:col-span-4">
-            <p className="text-[11px] uppercase tracking-luxe text-[#b5896a] mb-6">Direct</p>
+            <p className="text-[11px] uppercase tracking-luxe text-[#b5896a] mb-6">Direct line to Theo</p>
             <ul className="space-y-4 text-[#f5f1ea]/80">
-              <li className="flex items-center gap-3"><Phone size={14}/> +62 812 3456 7890</li>
-              <li className="flex items-center gap-3"><Mail size={14}/> hello@ayubali.co</li>
-              <li className="flex items-center gap-3"><MapPin size={14}/> Jl. Pantai Pererenan, Canggu, Bali</li>
-              <li className="flex items-center gap-3"><Instagram size={14}/> @ayu.bali</li>
+              <li><a href={WHATSAPP} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#b5896a] transition"><Phone size={14}/> {PHONE_DISPLAY}</a></li>
+              <li><a href={`mailto:${EMAIL}`} className="flex items-center gap-3 hover:text-[#b5896a] transition"><Mail size={14}/> {EMAIL}</a></li>
+              <li><a href={INSTAGRAM} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-[#b5896a] transition"><Instagram size={14}/> @Theo_JCPropertyagent</a></li>
+              <li><a href={OFFICE_URL} target="_blank" rel="noreferrer" className="flex items-start gap-3 hover:text-[#b5896a] transition"><MapPin size={14} className="mt-1 shrink-0"/> <span>{OFFICE_ADDR}</span></a></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#f5f1ea]/40">
-          <p>© {new Date().getFullYear()} Ayu Bali — Private Property Curation. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Theo · Jaya Carita Bali Property. All listings sourced from <a href="https://jcbaliproperty.com/" target="_blank" rel="noreferrer" className="underline hover:text-[#b5896a]">jcbaliproperty.com</a></p>
           <p className="flex items-center gap-2">
             <TreePalm size={12} className="text-[#b5896a]" /> Crafted with stillness, in Bali.
           </p>
@@ -708,7 +738,7 @@ function WhatsAppFloat() {
       transition={{ delay: 2.5, duration: 0.6 }}
       href={WHATSAPP} target="_blank" rel="noreferrer"
       className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
-      aria-label="WhatsApp Ayu"
+      aria-label="WhatsApp Theo"
     >
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </motion.a>
