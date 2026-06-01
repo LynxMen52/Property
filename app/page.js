@@ -328,7 +328,7 @@ function About() {
           <div className="aspect-[4/5] overflow-hidden rounded-sm bg-[#ebe4d8]">
             <img
               src="https://images.pexels.com/photos/14524357/pexels-photo-14524357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1200&w=900"
-              alt="Ayu, private property curator in Bali"
+              alt="Theo, private property curator in Bali"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]"
             />
           </div>
@@ -346,7 +346,7 @@ function About() {
           </motion.span>
 
           <motion.h2 variants={fadeUp} className="font-serif text-5xl md:text-7xl leading-[0.98] tracking-display mb-10">
-            I am Ayu. <span className="italic font-light text-[#8a5a3b]">A quiet introduction</span> to the right Bali.
+            I am Theo. <span className="italic font-light text-[#8a5a3b]">A quiet introduction</span> to the right Bali.
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-[#2b2926]/80 text-lg leading-relaxed mb-6 max-w-xl">
